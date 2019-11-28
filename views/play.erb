@@ -1,5 +1,13 @@
 <%= @player_1 + ' vs. ' + @player_2 %>
 
 <p>
-Player 2 hit points: 100
+  Player 2 hit points: 100
 </p>
+
+<p>
+  <%= @message %>
+</p>
+
+<form action='/attack' method='post'>
+  <input type='submit' value='attack'>
+</form>
