@@ -13,4 +13,13 @@ describe Player do
     player = Player.new "Alastair"
     expect(player.name).to eq "Alastair"
   end
+
+  describe 'receiving damage' do
+    it 'should have a 100 health to start' do
+      expect(subject.health).to eq 100
+    end
+    it 'should decrease health when attacked' do
+      expect{subject.reduce_health 10}.to change{subject.health}.by -10
+    end
+  end
 end
