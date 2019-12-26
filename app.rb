@@ -1,5 +1,5 @@
 require 'sinatra/base'
-require_relative 'lib/player'
+# require_relative 'lib/player'
 
 class Battle < Sinatra::Base
   enable :sessions
@@ -15,16 +15,16 @@ class Battle < Sinatra::Base
     redirect to '/play'
   end
 
-  get '/play' do
-    @player_1 = @@player_1
-    @player_2 = @@player_2
-    @message = session[:message]
-    erb :play
-  end
+  # get '/play' do
+  #   @player_1 = @@player_1
+  #   @player_2 = @@player_2
+  #   @message = session[:message]
+  #   erb :play
+  # end
 
-  post '/attack' do
-    session[:message] = 'Attack succesful'
-    @@game.attack
-    redirect to '/play'
-  end
+  # post '/attack' do
+  #   session[:message] = 'Attack succesful'
+  #   @@game.attack
+  #   redirect to '/play'
+  # end
 end

@@ -11,8 +11,8 @@ feature 'homepage' do
     expect(page).to have_content "Hisham vs. Alastair"
   end
 
-  scenario 'it should player two hit points' do
-    sign_in_and_play
-    expect(page).to have_content "Player 2 hit points: 100"
-  end
+  # scenario 'it should player two hit points' do
+  #   sign_in_and_play
+  #   expect(page).to have_content "Player 2 hit points: 100"
+  # end
 end
